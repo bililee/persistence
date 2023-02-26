@@ -5,8 +5,17 @@ server:
 spring:
   type : com.alibaba.druid.pool.DruidDataSource
   datasource:
-    driver-class-name : com.mysql.cj.jdbc.Driver
-  #将database_name改成自己的数据库的名称
-    url: jdbc:mysql://localhost:3306/database_name?serverTimezone=UTC&useUnicode=true&characterEncoding=utf-8
-    username: root
-    password: 12345678
+    master:
+#      driver-class-name : com.mysql.cj.jdbc.Driver
+      driver-class : com.mysql.jdbc.Driver
+      #将database_name改成自己的数据库的名称
+      jdbc-url: jdbc:mysql://localhost:3306/persistence_1?serverTimezone=UTC&useUnicode=true&characterEncoding=utf-8
+      username: root
+      password: 12345678
+    another:
+      driver-class : com.mysql.jdbc.Driver
+#      driver-class-name: com.mysql.cj.jdbc.Driver
+      #将database_name改成自己的数据库的名称
+      jdbc-url: jdbc:mysql://localhost:3306/persistence_2?serverTimezone=UTC&useUnicode=true&characterEncoding=utf-8
+      username: root
+      password: 12345678
