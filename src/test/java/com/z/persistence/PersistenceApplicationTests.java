@@ -1,13 +1,19 @@
 package com.z.persistence;
 
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
+import org.junit.runner.RunWith;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.context.junit4.SpringRunner;
 
-@SpringBootTest
-class PersistenceApplicationTests {
+@SpringBootTest(classes = {PersistenceApplication.class})
+@RunWith(SpringRunner.class)
+public class PersistenceApplicationTests {
 
     @Test
-    void contextLoads() {
+    public void contextLoads() {
+        System.out.println(123);
     }
+
+
 
 }
